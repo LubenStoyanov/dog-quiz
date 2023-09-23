@@ -3,18 +3,21 @@
     <head>
         <meta charset="utf-8" />
         <title>Doggo Fetch</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
-        <header>
-            <h1>Guess the Doggo</h1>
-            <p>What breed is the dog in this image?</p>
-        </header>
-
-        <main>
-            <div id="image-frame"></div>
-            <div id="options"></div>
-        </main>
+        <div class="page-wrapper">
+            <header class="header">
+                <h1 class="header__title">Guess the Dog</h1>
+                <p class="header__text">What breed is the dog in this image?</p>
+            </header>
+            <main class="quiz">
+                <div id="image-frame"></div>
+                <div id="options"></div>
+            </main>
+        </div>
     </body>
-    <script src="./main.js" type="module"></script>
+    <script src="./src/main.js" type="module"></script>
 </html>
+
