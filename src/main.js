@@ -1,6 +1,8 @@
 import { BREEDS } from "./breeds.js";
 import { getRandomElement, shuffleArray, getMultipleChoices } from "./utils.js";
 
+const nextDogBtn = document.querySelector(".quiz__next-dog");
+
 const RANDOM_IMG_ENDPOINT = "https://dog.ceo/api/breeds/image/random";
 
 function getBreedFromURL(url) {
@@ -37,7 +39,7 @@ function renderButtons(choicesArray, correctAnswer) {
         btn.value = choice;
         btn.textContent = choice;
         btn.addEventListener("click", buttonHandler);
-        options.appendChild(btn);
+        options.prepend(btn);
     }
 
 }
@@ -51,6 +53,10 @@ function renderQuiz(imgUrl, correctAnswer, choices) {
         frame.replaceChildren(image);
         renderButtons(choices, correctAnswer);
     });
+
+    nextDogBtn.addEventListener("click", (event) => {
+        location.reload();
+    })
 }
 
 async function loadQuizData() {

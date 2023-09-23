@@ -1,6 +1,7 @@
 :root {
-    --bg-primary: #140705;
-    --text-primary: #c79b6a;
+    --bg-primary: #1f1d1f;
+    --text-primary: #ffffec;
+    --info: #e5624f;
 }
 
 * {
@@ -22,7 +23,6 @@ body {
 }
 
 .header {
-    padding-top: 1rem;
     text-align: center;
 }
 
@@ -60,7 +60,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
     gap: 0.25rem;
 }
 
@@ -75,6 +75,12 @@ button {
     padding: 0.5rem 1rem;
     border-radius: 5px;
     font-size: inherit;
+}
+
+.quiz__next-dog {
+    border: none;
+    background-color: var(--info);
+    margin-top: 1rem;
 }
 
 .correct {
